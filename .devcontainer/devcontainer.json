@@ -1,10 +1,16 @@
 {
     "name": "cmake",
-    "dockerComposeFile": "docker-compose.yml",
+    "dockerComposeFile": "compose-dev.yml",
     "service": "googletest",
     "workspaceFolder": "/work",
-	"remoteUser": "gccuser",
-	"extensions": [
-		"ms-vscode.cpptools-extension-pack"
-	]
+    "remoteUser": "cuser",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack",
+                "xaver.clang-format",
+                "llvm-vs-code-extensions.vscode-clangd"
+            ]
+        }
+    }
 }

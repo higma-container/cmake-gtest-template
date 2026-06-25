@@ -1,14 +1,13 @@
-version: '3'
 services:
 
   googletest:
     image: googletest
     container_name: googletest
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
     volumes:
-      - ${PWD}:/work
+      - ..:/work
     working_dir: /work
     tty: true
     command: /bin/bash

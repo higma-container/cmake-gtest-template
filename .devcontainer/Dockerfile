@@ -1,6 +1,6 @@
-FROM gcc:12.2-bullseye
+FROM yoshiyasu1111/clang:v22.1.0
 
-RUN adduser -q --gecos "" --disabled-password gccuser \
+RUN useradd -m -s /bin/bash cuser \
     && apt-get update \
-    && apt-get install -y cmake \
+    && apt-get install -y cmake ninja-build clang-tidy clang-format clangd \
     && rm -fr /var/lib/apt/lists/*
